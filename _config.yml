@@ -1,7 +1,7 @@
 # --- Basic options --- #
 
 # Name of website
-title: Mayard's blog
+title: mayard's tech blog
 
 # Short description of your site
 description: description
@@ -13,9 +13,9 @@ author: mayard
 
 navbar-links:
   About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
+#  Resources:
+#    - Beautiful Jekyll: "https://beautifuljekyll.com"
+#    - Learn markdown: "https://www.markdowntutorial.com/"
 #  Author's home: "https://deanattali.com"
 
 # --- Logo --- #
@@ -70,7 +70,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "Mayard's Home"
+url-pretty: "mayard's tech blog"
 
 # Create a "tags" index page and make tags on each post clickable
 link-tags: true
