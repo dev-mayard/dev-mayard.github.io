@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 파이썬으로 Epub 파일 글자 수 세기
+title: Epub 파일 글자 수 세기
 subtitle: 파이썬으로 Epub 파일 글자 수 세는 간단한 툴 개발하기
 tags: [python]
 comments: true
@@ -18,7 +18,7 @@ Epub 파일의 글자 수를 카운팅 하여, 도서 정보를 제공 합니다
 
 ### #Epub 파일 구조
 
-![epub](/assets/img/epub_hierarchy.png)
+![epub](/assets/img/2020027/epub_hierarchy.png)
 
 Epub 파일은 대부분 위와 같은 구조로 되어 있는데, 
 
@@ -30,7 +30,7 @@ Epub 파일은 대부분 위와 같은 구조로 되어 있는데,
 
 
 
-![epub](/assets/img/20200227/content_opf.png)
+![content.opf](/assets/img/20200227/content_opf.png)
 
 
 **content.opf** 파일은 위와 같은 **xml** 포멧으로 되어 있습니다.
@@ -78,9 +78,9 @@ def __read_items__(self):
 
 위에서 얻은 파일들 **(content_files)** 은 **html**포멧의 파일이므로,  lxml 을 사용하여 파일을 연 뒤, 
 
-BeautifulSoup의 find_all() 함수를 통해 html 파일 내의 <body> 태그의 내용을 모두 가져 와 *.text 로 태그를 모두 제거 할 수 있습니다.
+**BeautifulSoup**의 **find_all()** 함수를 통해 **html** 파일 내의 **body** 태그의 내용을 모두 가져 와 ***.text** 로 태그를 모두 제거 할 수 있습니다.
 
-그 후, 공백과 개행 그리고 html에서 &nbsp; 에 해당하는 u00A0 를 모두 없앤 나머지 글자 수를 계산할 수 있습니다.
+그 후, 공백과 개행 그리고 **html**에서 **\&nbsp;** 에 해당하는 **u00A0** 를 모두 없앤 나머지 글자 수를 계산할 수 있습니다.
 
 
 
@@ -104,3 +104,67 @@ BeautifulSoup의 find_all() 함수를 통해 html 파일 내의 <body> 태그의
 
 ```
 
+
+
+
+
+### #검증하기
+
+특정 **Epub** 파일들의 경우 R*** 사이트에서 제공하는 글자수와 차이가 나는 경우들이 있었습니다.
+
+
+R\***사이트: **약 106,000자**
+
+![r_wc](/assets/img/20200227/r_wc.png)
+
+
+개발한 코드: **약 103,000자**
+
+![f_wc](/assets/img/20200227/f_wc.png)
+
+
+
+
+확인을 위해, 해당 **Epub** 파일을 직접 다운로드 하여, 수동으로 글자 수를 세봤습니다.
+
+
+
+위 코드와 동일하게, **html** 파일에서 **body** 내용을 가져 온 뒤, 
+
+1. 태그 제거 (regexp: (<([^>]+)>) )
+2. 공백 제거
+3. 개행 제거
+4. \&nbsp; 제거
+5. HTML Escape(NonBreakingSpace) 제거
+
+를 한 결과,
+
+
+![epub_detail](/assets/img/20200227/epub_detail.png)
+
+
+102,801 자, 약 **103,000** 자가 나왔습니다.
+
+
+
+글자 수 차이가 나는 원인은 아래와 같은 것으로 보입니다.
+
+
+
+특정 문자 제거 과정에서 **HTML Escape(NonBreakingSpace)** 제거 를 하지 않을 경우, 
+
+R\***사이트에서 제공하는 글자수와 동일한 글자 수가 나오게 됩니다(아래 그림 참고).
+
+
+
+![epub_detail2](/assets/img/20200227/epub_detail2.png)
+
+
+
+**NonBreakingSpace**는 에디터로 확인시 \&#160; 으로 보이게 됩니다(참고: http://www.htmlhelp.com/reference/charset/iso160-191.html).
+
+이 문자 역시 빈 공백이므로 글자수에서 제외하고 카운팅을 하는 게 맞다고 생각됩니다.
+
+
+
+![empty_space](/assets/img/20200227/empty_space.png)
