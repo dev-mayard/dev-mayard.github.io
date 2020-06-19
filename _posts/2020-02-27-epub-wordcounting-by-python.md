@@ -6,19 +6,20 @@ tags: [python]
 comments: true
 ---
 
-Epub 파일의 글자 수를 카운팅 하여, 도서 정보를 제공 합니다.
+전자책 표준 스펙인 Epub 파일의 글자 수 카운팅 기능을 파이썬으로 개발해봤습니다.
 
-
+***
 ### #개발환경
 **Language: python3**
 
 **Library: BeautifulSoup, lxml**
 
 
-
+  
+***
 ### #Epub 파일 구조
 
-![epub](/assets/img/2020027/epub_hierarchy.png)
+![epub](/assets/img/20200227/epub_hierarchy.png)
 
 Epub 파일은 대부분 위와 같은 구조로 되어 있는데, 
 
@@ -107,7 +108,7 @@ def __read_items__(self):
 
 
 
-
+***
 ### #검증하기
 
 특정 **Epub** 파일들의 경우 R*** 사이트에서 제공하는 글자수와 차이가 나는 경우들이 있었습니다.
