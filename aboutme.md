@@ -5,15 +5,17 @@ subtitle: About me
 ---
 
 Profile
-- Name: **Sungwook Kim**
-- Location: **Seoul/Korea**
+>**SungWook Kim**
+>- BackEnd Developer
+>- Seoul/Korea
+>- <https://github.com/dev-mayard>
+>- [devmayard@gmail.com](mailto:devmayard@gmail.com)
 
 ***
-
 Tech Skills
 >Major BackEnd
 >- Java, Spring, SpringBoot
->- Gradle, JPA, Maven, Ant
+>- JPA, Gradle, Maven, MyBatis
 
 >Major FrontEnd
 >- Javascript, jQuery, Thymeleaf, FreeMarker, HTML5
@@ -25,13 +27,10 @@ Tech Skills
 >- MySQL, MariaDB, Redis, MSSQL, PostgreSQL, H2DB, Informix
 >- ETL (Pentaho Spoon)
 
->CI/CD
->- Jenkins, GitLab, Github
+>DevOps
+>- AWS, Jenkins, GitLab, Github
 
 >OS
 >- Linux(CentOS)
-
->ETC
->- AWS
 
 ***
