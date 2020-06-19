@@ -4,13 +4,34 @@ title: About me
 subtitle: Why you'd want to go on a date with me
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+Profile
+- Name: **Sungwook Kim**
+- Location: **Seoul/Korea**
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+***
 
-What else do you need?
+Tech Skills
+>Major BackEnd
+>- Java, Spring, SpringBoot
+>- Gradle, JPA, Maven, Ant
 
-### my history
+>Major FrontEnd
+>- Javascript, jQuery, Thymeleaf, FreeMarker, HTML5
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+>Minor BackEnd
+>- Python
+
+>DataBases
+>- MySQL, MariaDB, Redis, MSSQL, PostgreSQL, H2DB, Informix
+>- ETL (Pentaho Spoon)
+
+>CI/CD
+>- Jenkins, GitLab, Github
+
+>OS
+>Linux(CentOS)
+
+>ETC
+>- AWS
+
+***
