@@ -126,7 +126,7 @@ R***사이트: **약 106,000자**
 
 
 
-확인을 위해, 해당 **Epub** 파일을 직접 다운로드 하여, 수동으로 글자 수를 세봤습니다.
+확인을 위해, 해당 **Epub** 파일을 직접 열어서, <a href="https://atom.io/" target="_blank">에디터</a>를 사용해 수동으로 글자 수를 세봤습니다.
 
 
 
@@ -162,7 +162,7 @@ R***사이트에서 제공하는 글자수와 동일한 글자 수가 나오게 
 
 
 
-**NonBreakingSpace**는 에디터로 확인시 \&#160; 으로 보이게 됩니다.
+**NonBreakingSpace**는 에디터로 확인시 &amp;#160; 으로 보이게 됩니다.
 
 참고: <http://www.htmlhelp.com/reference/charset/iso160-191.html>
 
