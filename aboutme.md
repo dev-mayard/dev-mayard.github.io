@@ -6,7 +6,7 @@ subtitle: About me
 
 Profile
 >**SungWook Kim**
->- BackEnd Developer
+>- Web Application BackEnd Developer
 >- Seoul/Korea
 >- <https://github.com/dev-mayard>
 >- [devmayard@gmail.com](mailto:devmayard@gmail.com)
@@ -24,7 +24,7 @@ Tech Skills
 >- Python
 
 >DataBases
->- MySQL, MariaDB, Redis, MSSQL, PostgreSQL, H2DB, Informix
+>- MySQL, MariaDB, Redis, Oracle, MSSQL, PostgreSQL, H2DB, Informix
 >- ETL (Pentaho Spoon)
 
 >DevOps
